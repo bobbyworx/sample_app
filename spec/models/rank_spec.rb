@@ -12,7 +12,12 @@ RSpec.describe Rank, type: :model do
   describe 'ranks attrs' do
     it 'checks if score_from is less than score_to' do
       rank = Rank.create(score_from: 2.4, score_to: 5.2, name: 'example rank' )
-      expect(rank.score_to).to be > rank.score_from
+      expect(rank.send(:lower_than_score_to?)).to eq true
+    end
+
+    it 'checks if score_to is higher than score_from' do
+      rank = Rank.create(score_from: 2.4, score_to: 5.2, name: 'example rank' )
+      expect(rank.send(:higher_than_score_from?)).to eq true
     end
 
     it 'checks for overlaping rank scores' do
