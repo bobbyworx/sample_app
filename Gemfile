@@ -26,6 +26,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.6'
   gem 'factory_bot_rails'
   gem 'faker', :git => 'git://github.com/stympy/faker.git', :branch => 'master'
+  gem 'shoulda-matchers', '~> 3.1'
 end
 
 group :development do
