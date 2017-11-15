@@ -23,6 +23,9 @@ gem 'unicorn'
 
 group :development, :test do
   gem 'pry-rails'
+  gem 'rspec-rails', '~> 3.6'
+  gem 'factory_bot_rails'
+  gem 'faker', :git => 'git://github.com/stympy/faker.git', :branch => 'master'
 end
 
 group :development do
