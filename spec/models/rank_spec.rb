@@ -3,9 +3,7 @@ require 'rails_helper'
 RSpec.describe Rank, type: :model do
 
   describe 'rank' do
-    it { should validate_presence_of(:score_from)}
-    it { should validate_presence_of(:score_to)}
-    it { should validate_presence_of(:name)}
+    it { should validate_presence_of(:name) }
   end
 
   describe 'ranks attrs' do
