@@ -20,7 +20,7 @@ RSpec.describe Rank, type: :model do
       rank_two = Rank.create(score_from: 4.0, score_to: 8, name: 'example rank two' )
 
       expect(Rank.score_overlap(rank_two.score_from).size).to eq 1
-      expect(rank_two.score_overlap_err.first).to include('overlaps with')
+      expect(rank_two.send(:score_overlap_err).first).to include('overlaps with')
     end
   end
 
